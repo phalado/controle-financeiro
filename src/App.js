@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { persistStore, persistReducer } from 'redux-persist';
@@ -7,6 +6,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import AsyncStorage from '@react-native-community/async-storage';
 import Navigation from './Navigation';
 import rootReducer from './reducers';
+import InitialScreen from './components/InitialScreen';
+import AccountCreate from './components/AccountCreate';
 
 const persistConfig = {
   key: 'root',
@@ -26,5 +27,8 @@ const App = () => (
   </Provider>
 );
 
-export default App;
+// const App = () => (
+//   <Navigation />
+// )
 
+export default App;
